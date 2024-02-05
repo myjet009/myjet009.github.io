@@ -8,7 +8,7 @@ pin: true
 math: true
 mermaid: true
 image:
-  path: /assets/img/tauri.png
+  path: /assets/img/tauri2.png
   lqip: data:image/webp;
   alt: Welcome to Tauri!
 ---
