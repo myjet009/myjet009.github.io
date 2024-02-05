@@ -23,7 +23,7 @@ image:
 
 
 ### [**Create Tauri App**](https://www.npmjs.com/package/create-tauri-app?activeTab=readme) 
-![Desktop View](/assets/img/create_tauri_app.png){: width="972" height="589" }
+![Desktop View](/assets/img/create_tauri_app.png){: width="972" height="589" } 
 
 
 #### 1. Tauri app 생성 시작
