@@ -2,7 +2,7 @@
 title: Tauri 시작
 author: ghlee
 date: 2024-02-05 22:21:00 +0900
-categories: [새로운, SW]
+categories: [SW, Tauri]
 tags: [Tauri]
 pin: true
 math: true
@@ -54,7 +54,7 @@ npm run tauri dev
 ```
 npx svelte-add@latest add tailwindcss
 ```
-- **`no such file of directory` 에러 발생할 경우, 해당 경로에 npm 폴더 생성하면 된다.**
+- **`no such file or directory` 에러 발생할 경우, 해당 경로에 npm 폴더 생성하면 된다.**
 
 
 #### 5. 기본 준비 완료
