@@ -9,6 +9,8 @@ math: true
 mermaid: true
 ---
 
+### ☞ Rust 설치는 [**여기 클릭**](../Rust-Start)
+
 ### ☞ Build
 - 프로젝트 생성 후, 별도 설정없이 `ctrl+shift+b` 를 누르면 아래와 같이 빌드를 선택해주면 빌드가 된다.
 
@@ -70,3 +72,7 @@ mermaid: true
 - 작업 완료 후, F5 를 누르면 아래와 같이 사용 가능
 
 ![Desktop View](/assets/img/debug_run_in_vscode.png)
+
+<br><br>
+
+### 기본적인 설치 및 개발환경 작업은 완료했으니... 
