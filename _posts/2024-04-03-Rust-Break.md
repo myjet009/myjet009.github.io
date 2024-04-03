@@ -1,5 +1,5 @@
 ---
-title: Rust 주저리 주저리 
+title: Rust 주저리 주저리1
 author: ghlee
 date: 2024-04-03 22:53:00 +0900
 categories: [SW, Rust]
@@ -9,7 +9,7 @@ math: true
 mermaid: true
 ---
 
-### ♣ Rust [주저리 주저리 1] - 2달 만의 포스팅...
+### ♣ 2달 만의 포스팅...
 
 - 사실 기존 c#으로 되어있던 프로젝트를 Rust로 이전을 시도를 했었다.   
 물론 잘 안되고 삽질만 하다가... 결국 문법 공부를 좀 재대로 하자는 생각에   
