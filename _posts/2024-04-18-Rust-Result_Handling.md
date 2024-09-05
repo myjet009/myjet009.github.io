@@ -10,16 +10,16 @@ mermaid: true
 ---
 
 ## ♧ Rust Result 고급 처리
+
 - Result 처리를 고급스럽게 처리를 해보자.
-- 동일하게 동작하는 총 4개의 방법을 구현했다.      뒤로 갈 수록 점점 간결해지는 코드이다.    
-물론 간결해 질수록 분석시간이 걸릴 수도 있지만, 코드가 점점 더 길어질수록 장점이 더 많을 수 있다.
-- 다른 언어에서 `?`는 보통 null을 의미하지만, 러스트에서는 Error 발생 시 `return` 을 의미하다.     
- 물론 return을 위해서 return type이 구현되어 있어야 한다.
-<br>
+- 동일하게 동작하는 총 4개의 방법을 구현했다. 뒤로 갈 수록 점점 간결해지는 코드이다.
+- 다른 언어에서 `?`는 보통 null을 의미하지만, 러스트에서는 Error 발생 시 `return` 을 의미하다.  
+   물론 return을 위해서 return type이 구현되어 있어야 한다.
+  <br>
 
 ### ☞ Sample Code
 
-``` rust
+```rust
 
 use std::str;
 use std::str::Utf8Error;
@@ -33,7 +33,7 @@ impl TryFrom<&[u8]> for Request {
     type Error = ParsingError;
 
     fn try_from(buf: &[u8]) -> Result<Request, Self::Error> {
-        
+
         // 첫 번째 방법
         match str::from_utf8(buf) {
             Ok(v) => {
@@ -93,7 +93,7 @@ fn main() {
 
 ```
 
-``` 
+```
 - let buf: [u8; 4] = [0xF0, 0x9F, 0x98, 0x81]
 정상 결과: 이모지 출력
 `
