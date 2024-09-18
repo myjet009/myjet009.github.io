@@ -19,8 +19,8 @@ mermaid: true
 
 아래 순서로 개발 환경 설치
 
-```cmd
-  1: pnpm create svelte@latest my-app
+```
+  1: npm create svelte@latest my-app
   2: cd my-app
   3: npm install
   4: npm install -D tailwindcss postcss autoprefixer
