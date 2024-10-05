@@ -15,9 +15,7 @@ mermaid: true
 >   Slot Props는 Child의 필드를 Parent에 전달하기 위하여 사용한다.  
 >   변수 뿐만 아니라 함수도 전달할 수 있다.
 
-### ▶ 사용법1: Svelte 공식 예제 + 조금 수정
-
-<br>
+### ▶ 사용법1: Svelte example and more
 
 - 파일: App.svelte
 
@@ -62,4 +60,43 @@ mermaid: true
 ```svelte
 <p on:click>Click me!</p>
 <slot/>
+```
+
+<br>
+
+### ▶ 사용법2
+
+> - 설명  
+>   Button의 isHovered를 parent에서 사용
+
+- 파일: App.svelte
+
+```svelte
+<script>
+	let name = 'world';
+	import Button from "./Button.svelte"
+</script>
+
+<h1>Hello {name}!</h1>
+
+<Button let:isHovered>
+	{#if isHovered}
+		<div>
+			isHovered
+		</div>
+	{/if}
+	Button!
+</Button>
+```
+
+- 파일: Button.svelte
+
+```svelte
+<script>
+	let isHovered = false;
+</script>
+
+<button on:mouseenter={()=>{isHovered = true}} on:mouseleave={()=>{isHovered = false}}>
+	<slot {isHovered}>test</slot>
+</button>
 ```
