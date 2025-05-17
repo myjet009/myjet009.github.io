@@ -2,7 +2,7 @@
 title: Github blog 로컬서버 사용방법
 author: ghlee
 date: 2024-09-05 23:00:00 +0900
-categories: [blog, jekyll]
+categories: [Blogging, jekyll]
 tags: [jekyll]
 pin: true
 math: true
