@@ -44,7 +44,6 @@ target_link_libraries(libA PUBLIC libB)  # libA가 libB에 의존
 
 
 - root CMakeLists.txt 
-
 ```shell
 cmake_minimum_required(VERSION 3.16)
 project(MultiLibExample)
@@ -56,13 +55,11 @@ add_subdirectory(src/libA)
 add_executable(my_app main.cpp)
 target_link_libraries(my_app PRIVATE libA)
 ```
-
 → libA만 링크하면, libB는 자동으로 링크됨 (PUBLIC 덕분)
 
 
 
 - 코드 예시: libA.cpp 
-
 ```cpp
 #include "libA.h"
 #include "libB.h"  // OK: CMake가 include path 설정함
