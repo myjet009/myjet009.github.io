@@ -43,7 +43,7 @@ target_link_libraries(libA PUBLIC libB)  # libA가 libB에 의존
   libA를 사용하는 다른 라이브러리/실행파일도 libB를 자동으로 링크함
 
 
-- 최상위 CMakeLists.txt   
+- root CMakeLists.txt   
 ```
 cmake_minimum_required(VERSION 3.16)
 project(MultiLibExample)
