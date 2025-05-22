@@ -24,7 +24,7 @@ project_root/
 ```
 
 ## 각 디렉토리별 CMake 설정
-- src/libB/CMakeLists.txt
+- src/libB/CMakeLists.txt 
 ```shell
 add_library(libB STATIC libB.cpp)
 target_include_directories(libB PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
@@ -32,7 +32,7 @@ target_include_directories(libB PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 → PUBLIC으로 설정하면, libB를 사용하는 다른 라이브러리도 libB.h를 include할 수 있습니다.
 
 
-- src/libA/CMakeLists.txt
+- src/libA/CMakeLists.txt 
 ```shell
 add_library(libA STATIC libA.cpp)
 target_include_directories(libA PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
@@ -42,7 +42,8 @@ target_link_libraries(libA PUBLIC libB)  # libA가 libB에 의존
   libA.cpp가 #include "libB.h" 가능
   libA를 사용하는 다른 라이브러리/실행파일도 libB를 자동으로 링크함
 
-- 최상위 CMakeLists.txt
+
+- 최상위 CMakeLists.txt   
 ```shell
 cmake_minimum_required(VERSION 3.16)
 project(MultiLibExample)
