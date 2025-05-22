@@ -62,11 +62,12 @@ target_link_libraries(my_app PRIVATE libA)
 
 
 - 코드 예시: libA.cpp 
-```shell
+
+```cpp
 #include "libA.h"
 #include "libB.h"  // OK: CMake가 include path 설정함
 
 void funcA() {
-    funcB();
+    funcB(); //test
 }
 ```
