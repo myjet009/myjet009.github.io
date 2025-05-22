@@ -44,7 +44,6 @@ target_link_libraries(libA PUBLIC libB)  # libA가 libB에 의존
 
 
 - 최상위 CMakeLists.txt   
-
 ```
 cmake_minimum_required(VERSION 3.16)
 project(MultiLibExample)
@@ -61,8 +60,8 @@ target_link_libraries(my_app PRIVATE libA)
 
 
 
-- 코드 예시: libA.cpp
-```c
+- 코드 예시: libA.cpp 
+```
 #include "libA.h"
 #include "libB.h"  // OK: CMake가 include path 설정함
 
