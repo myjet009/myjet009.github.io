@@ -8,6 +8,49 @@ pin: true
 
 ---
 
+
+4. aarch64-cross-toolchain.cmake
+
+```shell
+
+# aarch64-toolchain.cmake
+
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR aarch64)
+
+# 툴체인 경로: 환경에 맞게 수정
+set(TOOLCHAIN_DIR "$ENV{HOME}/ti-processor-sdk-linux-am62xx-evm-11.00.09.04/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/aarch64-oe-linux")
+
+set(CMAKE_C_COMPILER   ${TOOLCHAIN_DIR}/aarch64-oe-linux-gcc)
+set(CMAKE_CXX_COMPILER ${TOOLCHAIN_DIR}/aarch64-oe-linux-g++)
+
+# sysroot 경로 설정 (필요 시)
+set(CMAKE_SYSROOT "$ENV{HOME}/ti-processor-sdk-linux-am62xx-evm-11.00.09.04/linux-devkit/sysroots/aarch64-oe-linux")
+
+set(CMAKE_FIND_ROOT_PATH ${CMAKE_SYSROOT})
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+```
+
+5. x86-64-native-toolchain.cmake
+
+```shell
+
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR x86_64)
+
+set(CMAKE_C_COMPILER gcc)
+set(CMAKE_CXX_COMPILER g++)
+
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+```
+
+
+
 1. CMakePresets.json 사용 없이, 아래처럼 수동으로 실행가능
 
 ```
@@ -79,50 +122,6 @@ make -j4
 
 ```
 
-4. aarch64-cross-toolchain.cmake
-
-```shell
-
-# aarch64-toolchain.cmake
-
-set(CMAKE_SYSTEM_NAME Linux)
-set(CMAKE_SYSTEM_PROCESSOR aarch64)
-
-# 툴체인 경로: 환경에 맞게 수정
-set(TOOLCHAIN_DIR "$ENV{HOME}/ti-processor-sdk-linux-am62xx-evm-11.00.09.04/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/aarch64-oe-linux")
-
-set(CMAKE_C_COMPILER   ${TOOLCHAIN_DIR}/aarch64-oe-linux-gcc)
-set(CMAKE_CXX_COMPILER ${TOOLCHAIN_DIR}/aarch64-oe-linux-g++)
-
-# sysroot 경로 설정 (필요 시)
-set(CMAKE_SYSROOT "$ENV{HOME}/ti-processor-sdk-linux-am62xx-evm-11.00.09.04/linux-devkit/sysroots/aarch64-oe-linux")
-
-set(CMAKE_FIND_ROOT_PATH ${CMAKE_SYSROOT})
-set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
-set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
-set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
-
-
-```
-
-5. x86-64-native-toolchain.cmake
-
-```shell
-
-set(CMAKE_SYSTEM_NAME Linux)
-set(CMAKE_SYSTEM_PROCESSOR x86_64)
-
-set(CMAKE_C_COMPILER gcc)
-set(CMAKE_CXX_COMPILER g++)
-
-set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
-set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
-set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
-set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
-
-
-
-```
 
 
 6. 선택하여 실행가능

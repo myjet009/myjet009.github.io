@@ -1,5 +1,5 @@
 ---
-title: CMake Git 서브모듈 사용
+title: CMake FetchContent
 author: ghlee
 date: 2025-05-25 14:25:00 +0900
 categories: [CMake, FetchContent]

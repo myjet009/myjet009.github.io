@@ -103,6 +103,7 @@ catch_discover_tests(${TEST_MAIN})
 ```
 
 3. launch.json 파일
+
 ```shell
 {
     "version": "0.2.0",
@@ -169,18 +170,19 @@ catch_discover_tests(${TEST_MAIN})
 
 ```
 
-launch.json 파일 주요 포인트
+
+- launch.json 파일 주요 포인트
 
 1. "${command:cmake.launchTargetPath}"
 이 부분은 CMake Tools 확장 기능이 제공하는 명령입니다.
 CMake가 빌드한 실행 파일 경로를 자동으로 가져옵니다.
 즉, CMake를 통해 빌드된 결과물을 디버깅하는 것이죠.
 
-2.cppdbg
+2. cppdbg
 VS Code의 **C/C++ 디버거 확장(Microsoft C/C++ extension)**이 사용하는 디버깅 타입입니다.
 GDB를 사용하여 디버깅을 수행합니다.
 
-3.launch.json
+3. launch.json
 이 설정은 VS Code에서 수동으로 디버깅 구성을 정의한 것입니다.
 빌드는 CMake가 하고, 디버깅 실행은 VS Code가 gdb로 합니다.
 
