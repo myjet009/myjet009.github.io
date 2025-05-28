@@ -1,5 +1,5 @@
 ---
-title: CMake CrossCompile
+title: CMake CrossCompile && CMakePrests.json
 author: ghlee
 date: 2025-05-27 23:34:00 +0900
 categories: [CMake, CrossComplie]
@@ -9,7 +9,7 @@ pin: true
 ---
 
 
-4. aarch64-cross-toolchain.cmake
+1. aarch64-cross-toolchain.cmake
 
 ```shell
 
@@ -33,7 +33,7 @@ set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 ```
 
-5. x86-64-native-toolchain.cmake
+2. x86-64-native-toolchain.cmake
 
 ```shell
 
@@ -51,7 +51,7 @@ set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 
 
 
-1. CMakePresets.json 사용 없이, 아래처럼 수동으로 실행가능
+3. CMakePresets.json 사용 없이, 아래처럼 수동으로 실행가능
 
 ```
 mkdir build
@@ -122,9 +122,30 @@ cmake --build . -j4
 
 ```
 
+4. CMakeprests.json
+
+```json
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "cmake.options.statusBarVisibility": "visible",
+    "cmake.useCMakePresets": "auto",
+    "files.associations": {
+        "*.pyx": "cython",
+        ".clang*": "yaml",
+        "*.gpj": "jsonc",
+        "*.gvw": "jsonc",
+        "*.hpp.in": "cpp",
+        "limits": "cpp",
+        "iostream": "cpp"
+    }
+}
+
+```
 
 
-6. 선택하여 실행가능
+
+
+5. 선택하여 실행가능
 
 ```
 cmake --preset native
