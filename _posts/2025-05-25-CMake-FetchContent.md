@@ -89,3 +89,6 @@ target_link_libraries(
 ```
 
 3. 이후 cmake .. & cmake --build .
+
+4. Ninja 설치때문인지 모르겠지만, 되던 빌드와 디버깅이 안되더는 경우가 발생
+   → build 폴더 삭제 후, 재시도 시 정상동작 확인

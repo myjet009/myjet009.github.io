@@ -170,6 +170,9 @@ catch_discover_tests(${TEST_MAIN})
 
 ```
 
+- 이제 vscode에서 하단바에 메인프로젝트or테스트 선택해서 f5로 디버깅 가능함
+
+
 
 - launch.json 파일 주요 포인트
 

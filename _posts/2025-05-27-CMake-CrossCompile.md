@@ -57,7 +57,7 @@ set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
 mkdir build
 cd build
 cmake .. -DCMAKE_TOOLCHAIN_FILE=../Toolchains/aarch64-cross-toolchain.cmake
-make -j4
+cmake --build . -j4
 ```
 
 2. CMakePresets.json 추가 프로젝트 구조
