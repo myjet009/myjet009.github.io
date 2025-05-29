@@ -1,9 +1,9 @@
 ---
-title: Linux cmd 정리!
+title: Linux Command
 author: ghlee
-date: 2025-05-30 00:31:00 +0900
-categories: [Linux, CMD]
-tags: [Linux_CMD]
+date: 2025-05-30 00:50:00 +0900
+categories: [Linux, Command]
+tags: [LinuxCommand]
 pin: true
 
 ---
