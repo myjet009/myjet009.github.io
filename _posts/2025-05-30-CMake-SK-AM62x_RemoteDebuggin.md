@@ -1,7 +1,7 @@
 ---
 title: CMake && SK-AM62x Remote Debugging
 author: ghlee
-date: 2025-05-22 23:25:00 +0900
+date: 2025-05-30 00:04:00 +0900
 categories: [CMake, SK-AM62x Remote Debugging]
 tags: [CMake]
 pin: true
@@ -108,11 +108,10 @@ pin: true
 
 
 4. 최상위 CMakeLists.txt
+아래 set 추가하면 빌드폴더에 compile_commands.json 파일 생성됨
 
 ```shell
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-추가하면 빌드폴더에 compile_commands.json 파일 생성됨
-cat ./build/aarch64/compile_commands.json | grep "\-g" # 이 명령어로 -g flag 있는지 확인
-
+cat ./build/aarch64/compile_commands.json | grep "\-g" # 위 set 추가후, 이 명령어로 -g flag 있는지 확인
 ```
