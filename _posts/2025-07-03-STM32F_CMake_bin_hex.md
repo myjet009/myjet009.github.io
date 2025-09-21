@@ -2,8 +2,8 @@
 title: STM32F CMAKE bin, hex 생성
 author: ghlee
 date: 2025-07-03 23:17:00 +0900
-categories: [ST, CMake]
-tags: [ST]
+categories: [CMake, ST]
+tags: [CMake]
 pin: true
 
 ---
