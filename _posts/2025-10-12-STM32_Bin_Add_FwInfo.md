@@ -18,6 +18,7 @@ pin: true
   - [✅ 정리 비교](#-정리-비교)
   - [✅ 4. C# 유틸리티 (Windows 환경용)](#-4-c-유틸리티-windows-환경용)
     - [✅ 사용 방법](#-사용-방법)
+    - [✅ 특징](#-특징)
 
 ---
 
@@ -170,10 +171,7 @@ add_custom_command(TARGET app POST_BUILD
 
 ---
 
-필요 시 **STM32CubeIDE용 Post-build 자동화 스크립트** 또는 **CMake 완성 예시** 버전으로 확장 가능합니다.
 
-
----
 
 ## ✅ 4. C# 유틸리티 (Windows 환경용)
 
@@ -287,3 +285,19 @@ BinHeaderTool.exe app.bin app_with_header.bin
 출력 예시:
 
 ```
+Header added successfully!
+Length : 98304 bytes
+CRC32  : 0xA37C1B29
+Output  : app_with_header.bin
+```
+
+### ✅ 특징
+
+| 항목 | 설명 |
+|------|------|
+| 입력 | 원본 BIN 파일 (`app.bin`) |
+| 출력 | 헤더 포함 BIN (`app_with_header.bin`) |
+| 헤더 구조 | `[4B Length][4B CRC32][8B Reserved(0)]` |
+| CRC 알고리즘 | IEEE 802.3 (0xEDB88320) |
+| 엔디언 | **리틀엔디언** (STM32 기준) |
+
